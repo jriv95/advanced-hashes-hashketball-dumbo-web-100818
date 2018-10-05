@@ -150,11 +150,12 @@ end
 
 def team_colors(team_name)
   game_hash.each do |key,value|
-    game_hash[key].values.include?(team_name)
+    if game_hash[key].values.include?(team_name)
     value.each do |key_2,value_2|
       if key_2 == :colors
         return value_2
       end
     end
+  end
   end
 end
