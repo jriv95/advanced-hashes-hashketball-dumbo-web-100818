@@ -160,9 +160,9 @@ def team_colors(team_name)
   end
 end
 
-def team_name(team_name)
+def team_name(name)
   game_hash.each do |key,value|
-    #if game_hash[key].values.include?(team_name)
+    if game_hash[key].values.include?(name)
       value.each do |key_2,value_2|
         if key_2 == :team_name
           return value_2
